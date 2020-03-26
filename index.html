@@ -1,0 +1,169 @@
+<head>
+	<title>index</title>
+	<style>
+  body{
+	zoom:125%;
+	font-family: 'poppins',sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #060c21;
+}
+
+.container{
+	position: relative;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+	grid-template-rows: auto;
+	grid-gap: 0 40px;
+}
+
+.container .box{
+	position: relative;
+	height: 400px;
+	background: #060c21;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border:1px solid #000;
+}
+
+
+.container .box:before{
+	content: '';
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	left:-2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg,2deg);
+	z-index: -1;
+	transition: 1s;
+}
+
+.content {
+	position: relative;
+	padding: 20px;
+	transform: translateY(40px);
+}
+
+.box .content h2{
+	position: absolute;
+	top:-60px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 8em;
+	color:rgb(255,255,255,0.05);
+	transition: 0.5s;
+}
+
+.box:hover .content h2{
+	top: -140px;
+}
+
+.box .content h3{
+	margin:0 0 10px;
+	padding:0;
+	font-size: 24px;
+	font-weight: 500;
+	color:#fff;
+}
+
+.box .content p{
+	margin:0;
+	padding: 0;
+	font-size: 16px;
+	color:#fff;
+}
+
+.box .content a{
+	position: relative;
+	margin:0;
+	padding:10px 20px;
+	text-decoration:none;
+	border:1px solid #fff;
+	display: inline-block;
+	color:#fff;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.box:hover .content a{
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.box .content a:hover{
+	color:#000;
+	background: #fff;
+}
+
+.container .box:nth-child(1):before{
+	background:linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.container .box:nth-child(2):before{
+	background:linear-gradient(315deg,#e91e63,#5d02ff);
+}
+.container .box:nth-child(3):before{
+	background:linear-gradient(315deg,#ff0000,#ffc107);
+}
+
+.container .box:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgb(255,255,255,0.05);
+	pointer-events: none;
+}
+h2:hover{
+	cursor: default;
+}
+  </style>
+</head>
+
+<body>
+	<div class="container">
+		<dir class="box">
+			<div class="content">
+				<h2>DAW</h2>
+				<h3>Course One</h3>
+				<p>course in the domaine of web developpement : HTML , CSS , JS , PHP</p><br>
+				<a href="#">learn more</a>
+			</div>
+		</dir>
+
+
+		<dir class="box">
+			<div class="content">
+				<h2>SE</h2>
+				<h3>Course Two</h3>
+				<p>course in the domaine of operation systems : Windows , Ubuntu , Kali , Hacking , Security</p><br>
+				<a href="#">learn more</a>
+			</div>
+		</dir>
+
+
+		<dir class="box">
+			<div class="content">
+				<h2>BD</h2>
+				<h3>Course three</h3>
+				<p>course in the domaine of data bases science : SQL , SQL+ , SQL SERVERS , ORACLE</p><br>
+				<a href="#">learn more</a>
+			</div>
+		</dir>
+
+
+	</div>
+</body>
